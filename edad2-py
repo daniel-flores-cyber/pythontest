@@ -8,3 +8,4 @@ elif edad>=18 and edad<=64:
     print("es adulto")
 else:
     print("es mayor")
+    

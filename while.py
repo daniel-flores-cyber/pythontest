@@ -15,12 +15,14 @@
 #     resp=input("desea salir")
 
 clave=3344
-contraseña=int(input("ingrese su contraseña"))
+contraseña=int(input("ingrese su contraseña "))
 while clave!=contraseña:
     print("error")
-    contraseña=int(input("ingrese su contraseña"))
-print("bienvenido")    
+   
     
+    contraseña=int(input("ingrese su contraseña " ))
+print("bienvenido")  
+  
 
     
 
