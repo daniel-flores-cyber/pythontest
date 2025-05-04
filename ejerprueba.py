@@ -60,26 +60,27 @@
 #     print("puntos insuficientes")    
 
 
-import random
-meta=31
-turno=1
-j2=0
 j1=0
-while meta!=30:
-    if turno%2==0:
-     print("turno de j1")
-     dado=random.randint(1,6)
-     j1=j1+dado
-     print("j1 saco", dado)
-     print("avanzo a la casilla ", j1)
-    else: 
-     print("turno de j2 ")   
-     dado=random.randint(1,6)
-     j2=j2+dado
-     print("j1 saco", dado)
-     print("avanzo a la casilla ", j2)
+j2=0
+import time
+while j1<30 and j2<30:
+    time.sleep(1)
+    
+    print("turno de j1")
+    dado=random.randint(1,6)
+    j1=j1+dado
+    print("saco",dado)
+    print("avanzo a la casilla",j1)
 
-if j1>=31:
-  print("gano el j1")
+    
+    time.sleep(1)
+    print("turno de j2")
+    dado=random.randint(1,6)
+    j2=j2+dado
+    print("saco",dado)
+    print("avanzo a la casilla",j2)
+    
+if j1>j2:
+    print("Gano j1")
 else:
-  print("ganoel j2")
+    print("Gano j2")    
