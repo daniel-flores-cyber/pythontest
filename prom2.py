@@ -7,7 +7,7 @@ for i in range(cant):
     suma=suma+nota
 prom=suma/cant
 print("su promedio es ", round (prom,1))
-if prom<4:
+if prom>4:
     print("Aprobo",prom) 
 else:
     print("Reprobo",prom)
