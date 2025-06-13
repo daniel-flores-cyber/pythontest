@@ -6,3 +6,5 @@
 # 4.-salir
 # que el carrito comience con 3 productos
 # hay que hacer 3 listas, productos, precio y carrito
+
+
