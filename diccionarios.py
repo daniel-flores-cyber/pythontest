@@ -35,31 +35,51 @@
 # 3.- borrar fruta y precio
 # 4.- mostrar todas las frutas y precios
 # 5.- salir
-
-frutas={}
+frutas={
+    "manzana": 1500,
+    "frutilla": 1600,
+    "durazno": 3800
+}
+total=0
 while True:
-    print('''
-    1.- ingresar fruta
-    2.- actualizar precio
-    3.- borrar fruta y precio
-    4.- mostrar todas las frutas y precios
-    5.- salir''')
-    op=int(input("seleccione una opcion "))
+    print('''1.- Ingresar fruta y precio
+2.- Actulizar precio
+3.- Borrar Furta y precio
+4.- Mostrar todas las frutas y precios
+5.- Comprar
+6.- Salir''')
+    op=int(input("Seleccione una opcion "))
     match op:
         case 1:
-            fru=input("ingrese la fruta ")
-            val=int(input("ingrese el valor "))
+            fru=input("Ingres la fruta")
+            val=input("ingrese el precio")
+
             frutas[fru]=val
         case 2:
-            print()
+            for key, value in frutas.items():
+                print(key, value)
+            sel=int(input())
         case 3:
-            print()
+            for key, value in frutas.items():
+                print(key,".-", value)
+            dell=input("Seleccione la fruta a borrar ")
         case 4:
-            for key in frutas:
-                print(key) 
+            for key, value in frutas.items():
+                print(key,".-", value)
         case 5:
-            print("saliendo")
+            opc=-1
+            while opc!=0:
+                for key, value in frutas.items():
+                    print(key,".-", value)
+                opc=input("Seleccione una opcion ")
+                if opc==0:
+                    break
+                else:
+                    total=total+frutas[opc]
+            print("el total a pagar es ", total)    
+        case 6:
+            print("Saliendo")
             break
         case _:
-            print("opcion invalida ")               
-            
+            print("opcion invalida")              
+             
