@@ -58,15 +58,15 @@ while True:
             for n,producto in enumerate(productos):
                 print(n+1,producto["nombre"],producto["precio"])
                 borrar=int(input("selecciones cual desea borrar"))
-                productos.pop(borrar-1)
+                productos.pop(borrar)
         case 3:
             for n,producto in enumerate(productos):
                 print(n+1,producto["nombre"],producto["precio"])
-                act=int(input("seleccione cual desea actualizar"))
-                nombre=input("ingrese el nombre del articulo ")
-                precio=int(input("ingrese el nuevo precio "))
-                productos[act-1]["nombre"]=nombre
-                productos[act-1]["precio"]=precio
+            act=int(input("seleccione cual desea actualizar"))
+            nombre=input("ingrese el nombre del articulo ")
+            precio=int(input("ingrese el nuevo precio "))
+            productos[act-1]["nombre"]=nombre
+            productos[act-1]["precio"]=precio
         case 4:
             for n,producto in enumerate(productos):
                 print(n+1,producto["nombre"],producto["precio"])
