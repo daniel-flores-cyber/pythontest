@@ -53,21 +53,34 @@ while True:
         case 1:
             art=(input("ingrese el nombre del articulo "))
             pre=int(input("ingrese el precio del articulo "))
+            co=input("ingrese el color ")
             productos.append({"nombre":art,"precio":pre})
         case 2:
             for n,producto in enumerate(productos):
                 print(n+1,producto["nombre"],producto["precio"])
-                borrar=int(input("selecciones cual desea borrar"))
-                productos.pop(borrar)
+            borrar=int(input("selecciones cual desea borrar "))
+            del productos[borrar]
         case 3:
             for n,producto in enumerate(productos):
                 print(n+1,producto["nombre"],producto["precio"])
-            act=int(input("seleccione cual desea actualizar"))
-            nombre=input("ingrese el nombre del articulo ")
-            precio=int(input("ingrese el nuevo precio "))
-            productos[act-1]["nombre"]=nombre
-            productos[act-1]["precio"]=precio
-        case 4:
+            act=int(input("sleciones el articulo a actualizar "))
+            while True:
+                print('''
+                      1.-nombre
+                      2.-precio
+                      3.-salir''')
+                dato=int(input("selecione una opcion "))
+                match dato:
+                    case 1:
+                        n=input("ingrese el nuevo nombre ")
+                        productos[act-1]["nombre"]=n
+                    case 2:
+                        n=input("ingrese el nuevo precio ")
+                        productos[act-1]["precio"]=n
+                    case 3:
+                        print("saliendo")
+                        break    
+        case 4: 
             for n,producto in enumerate(productos):
                 print(n+1,producto["nombre"],producto["precio"])
         case 5:

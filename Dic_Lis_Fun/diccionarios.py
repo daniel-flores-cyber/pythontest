@@ -53,7 +53,6 @@ while True:
         case 1:
             fru=input("Ingres la fruta")
             val=input("ingrese el precio")
-
             frutas[fru]=val
         case 2:
             for key, value in frutas.items():
