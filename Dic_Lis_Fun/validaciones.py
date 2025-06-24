@@ -37,9 +37,9 @@
 # verifico si tengo mayusclas y/o minisculas
 # y tiene por lo menos un numero
 
-tieneMayus=False
-tieneMinus=False
-tieneNumero=False
+# tieneMayus=False
+# tieneMinus=False
+# tieneNumero=False
 
 #hacemos un recorrido de cada letra en mi clave
 # for letra in clave:
