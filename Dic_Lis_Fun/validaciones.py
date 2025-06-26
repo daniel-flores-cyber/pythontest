@@ -75,7 +75,7 @@
 #     if caracter in specials:
 #         print("Si es un cracter especial")
   
-clave="Tredf99"      
+clave=input()      
 def valida_pass(clave):
     Mayuscula=False
     Minuscula=False
